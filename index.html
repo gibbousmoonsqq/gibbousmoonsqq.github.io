@@ -1,0 +1,44 @@
+<!DOCType HTML>
+<html>
+<head>
+<title>Testing JavaScript</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        //personality things.
+        function personality(){
+            document.write(
+            '<br>PERSONALITY <br>'
+            +'Affection: '+getRandomInt(1,7)+'<br>'
+            +'Sexual Appetite: '+getRandomInt(1,7)+'<br>'
+            +'Dominance: '+getRandomInt(1,7)+'<br>'
+            +'Lewdness: '+getRandomInt(1,7)+'<br>'
+            +'Romance: '+getRandomInt(1,7)+'<br>'
+            +'Clingyness: '+getRandomInt(1,7)+'<br>'        
+            +'Assertiveness: '+getRandomInt(1,7)+'<br>'
+            +'Bitchyness: '+getRandomInt(1,7)+'<br>'
+            +'Greed: '+getRandomInt(1,7)+'<br>'
+            +'Eloquence: '+getRandomInt(1,7)+'<br>'
+            +'Friendship: '+getRandomInt(1,7)+'<br>'
+            +'Maternal Instinct: '+getRandomInt(1,7)+'<br>'
+            );
+        }
+        var species =["Akaname", "Alice", "Alp", "Alraune", "Amazoness", "Angel", "AntArachne", "Anubis", "Apophis", "Apsara", "Arachne", "ArchImp", "Automaton", "Baphomet", "Barometz", "Basilisk", "Beelzebub", "Bicorn", "BlackHarpy", "BlueOni", "BubbleSlime", "CaitSith", "Cancer", "Centaur", "Charybdis", "CheshireCat", "Chimaera", "Chochin-Obake", "Cockatrice", "CrowTengu", "CuSith", "Cupid", "CursedSword", "Cyclops", "DarkAngel", "DarkElf", "DarkMage", "DarkMatter", "DarkPriest", "DarkSlime", "DarkValkyrie", "Demon", "DemonLord", "Devil", "Dhampir", "Doppelganger", "Dormouse", "Dragon", "DragonZombie", "Druella", "Dryad", "Dullahan", "Dwarf", "Echidna", "Elf", "Fairy", "Familiar", "FlowKelp", "Gandharva", "Gargoyle", "Gazer", "Ghost", "Ghoul", "GiantAnt", "GiantSlug", "Girtablilu", "Glacies", "Gnome", "Goblin", "Golem", "Gremlin", "Griffon", "Grizzly", "GyoubuDanuki", "Hakutaku", "Harpy", "Hellhound", "Hinezumi", "Hobgoblin", "Holstaur", "HoneyBee", "Hornet", "Houri", "HumptyEgg", "IceQueen", "Ignis", "Imp", "Inari", "Ittan-momen", "Jabberwock", "Jiangshi", "Jinko", "JinnoftheJar", "Jorou-Gumo", "Jubjub", "Kakuen", "Kamaitachi", "Kappa", "Karakasa-Obake", "Kejourou", "KesaranPasaran", "Khepri", "Kikimora", "Kitsune-bi", "Kitsune-tsuki", "Kobold", "Koyoi", "Kraken", "Kunoichi", "Lamia", "LargeMouse", "LavaGolem", "LeananSidhe", "LesserSuccubus", "Lich", "Lilim", "Liliraune", "LivingArmor", "LivingDoll", "Lizardman", "MadHatter", "Mandragora", "Manticore", "Mantis", "MarchHare", "Matango", "Medusa", "Mermaid", "Merrow", "Mersé", "Mimic", "Mimiru", "Mindflayer", "Minotaur", "Mothman", "MucusToad", "Mummy", "Nekomata", "Nereid", "Nightmare", "Nurarihyon", "Nureonago", "Ochimusha", "Ogre", "Oomukade", "Orc", "Otohime", "ParasiteSlime/SlimeCarrier", "Pharaoh", "Pixie", "Primera", "QueenofHearts", "QueenSlime", "Raiju", "RedOni", "RedSlime", "RenXiongmao", "Roper", "Ryu", "Sahuagin", "Salamander", "Sandworm", "SaphiretteSpherica", "Sasha", "Satyros", "Scylla", "SeaBishop", "SeaSlime", "Selkie", "Shirohebi", "Shoggoth", "Siren", "Skeleton", "Slime", "SoldierBeetle", "Sphinx", "Succubus", "Sylph", "Tentacle", "Thunderbird", "Titania", "Troll", "Trumpart", "UmiOsho", "UnagiJoro", "Undine", "Unicorn", "Ushi-Oni", "Valkyrie", "VampMosquito", "Vampire", "Wendigo", "Werebat", "Werecat", "Wererabbit", "Weresheep", "Werewolf", "WhiteHorn", "Wight", "Will-o-the-Wisp", "Wilmarina", "Witch", "Wurm", "Wyvern", "Yeti", "Youko", "Yuki-Onna", "Zombie"];
+        
+        function pickSpecies(){
+            document.write('<br>SPECIES: '+species[getRandomInt(1,species.length-1)]+'<br>');
+        }
+        
+        document.write('<br>DIRECTIONS: Simply by opening this page you have done all you need to.  Numbers below are 1-6, with 1 being not at all, 3 being \'eh\', and 6 being very much so.<br>')
+        //call all functions here
+        pickSpecies();
+        personality();
+    </script>
+</body>
+</html> 
