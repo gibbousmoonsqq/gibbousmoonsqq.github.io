@@ -1,44 +1,149 @@
-<!DOCType HTML>
+<!DOCTYPE html>
 <html>
-<head>
-<title>Testing JavaScript</title>
-</head>
 <body>
+    <!--This is the over-incrimenter (sp)-->
+    <p id="counter">Points: 0</p>
+    
+    <p>Congratulations! You are now a contestant on the popular television game show "Slut Life." For the next year, you will be living in an apartment provided by us together with the other contestants. All your actions will be monitored and broadcasted constantly to a universal audience. At the end of the year, you can choose from a list of rewards. Breaking any rules will result in the instant revocation of your reward.</p> 
+    <p>As part of the show, you will be transported to another planet for the duration of your stay. Instead of the normal 24 hour days you're used to, each day on this planet lasts for 32 hours. While this may seem tiring at first, your body will adjust rather quickly. After you're done, you can either stay here or go back to Earth.</p>
+    <p>To begin, first select a difficulty from the section immediately below.  This will determine your starting number of points, tracked on the top of this page.  Taking options later in will add or subtract from this point total.  You must have greater than or equal to zero points at the end of this CYOA, and while you do not <i>have</i> to obey the restrictions in the options' descriptions it's a bit cheating not to.  Good luck!</p>
+    
+    <p>
+        <button onclick="toggle(easy)">Toggle</button>Easy Mode: (40)<br>
+        <button onclick="toggle(medium)">Toggle</button>Medium Mode: (20)<br>
+        <button onclick="toggle(hard)">Toggle</button>Hard Mode: (0)<br>
+        <button onclick="toggle(slaveToTheShow)">Toggle</button>Slave to the Show Mode: (-150)<br>
+        <button onclick="toggle(anonMustDie)">Toggle</button>Anon Must Die Mode: Minimum of 3 owners, minimum of 5 punishments, maximum of 1 job. (-200)<br>
+    </p>
+    <p>
+        As part of the show, you will be given a completely new body for +40 credits. Alternatively, you can elect to keep your current body for +20 credits; ignore the rest of this section if you choose to do so.  If you do choose to create a new body, you will need to freely decide whether you start with:<br>
+        -Your age, from 10-80 years old.<br>
+        -Your height, from 2'5"-10'.<br>
+        -Your face, choosing from handsome, manly, boyish, androgynous, girly, womanly, beautiful, and bimbo.<br>
+        -Your chest, choosing from flat up to greater than f-cup.<br>
+        -Your ass, choosing from flat, petite, normal, apple bubble, badonk, wide, and double wide.<br>
+        -A starting genetalia, choosing from a penis, a nonfertile vagina, a fertile vagina, or no sex.  <br>
+        -If you have a penis, its size from 1"-16".<br>
+        -If you have a penis, its girth from 0.25"-3".<br>
+        -If you have a penis, their size from half to twice that of your penis girth.<br>
+        -Your hair length, between 0" and 4'.<br>
+        -Your natural hair color, including all naturally and unnaturally occuring hair colors.<br>
+        -Your eye color, including all naturally and unnaturally occuring eye colors.<br>
+        -Your skin color, including all naturally and unnaturally occuring skin colors.<br>
+        -Your body type, choosing from skinny, athletic, average, and chubby.<br>
+        -And your voice, choosing from masculine, feminine, childish, and mute.  <br>
+        <br>
+        If your starting age is 10 - 17, you will start at a "reduced" version and "grow into" what you chose.  Hyperfertile vaginas have a 100% pregnancy rate among the same species parents, a 20% chance of being impregnated by a father of a different species (half-human species are considered the same species genetically), and do not respond to chemical contraceptives. Each penis has its own set of testicles, however they can be removed if you don't want them. Embedded testicles overrides testicle size. Girth refers to diameter, in this case. Genitals determine sex: male is penis only, female is vagina only, futanari/hermaphrodite is both vagina and penis. If you look/act female but have a penis, you are considered a trap and can override non-male-only restrictions.<br>
+    </p>
+    <p>
+        <button onclick="toggle(newBody)">Toggle</button>Build-A-Body: You are creating your own custom base form from the provided list of options.. (40)<br>
+        <button onclick="toggle(oldBody)">Toggle</button>Keep Your Old Body: You are going to keep the base form you inhabit right now.. (20)<br>
+    </p>
+    
+    <p>
+        Pick as many as you wish.  <br>
+        <button onclick="toggle(addTesticles)">Toggle</button>Add Testicles: Extra pairs of testacles start at normal size.. (-5) <br> 
+    <button onclick="toggle(addDick)">Toggle</button>Add Dick: Extra penises start at 5" length/0.8" girth.. (-5)<br>
+    <button onclick="toggle(addBreasts)">Toggle</button>Add Breasts: Extra pairs of breasts start at B-cup. (-5)<br>
+    <button onclick="toggle(hyperFertileVagina)">Toggle</button>Hyperfertile Vagina: Your vagina will be *upgraded* to a hyperfertile version. Requires a fertile vagina.. (10)<br>
+    <button onclick="toggle(hormones)">Toggle</button>Hormones: You will receive hormone treatment to make your body more feminine physically.. (-1)<br>
+    <button onclick="toggle(hairRemoval)">Toggle</button>Hair Removal: We'll permanently remove any hair on your body that you don't want.. (-1)<br>
+    <button onclick="toggle(masochist)">Toggle</button>Masochist: You now feel pleasure from pain.. (-3)<br>
+    <button onclick="toggle(extremeMasochist)">Toggle</button>Extreme Masochist: You still feel the pain, causing you to become 'confused'. Requires Masochist. (2)<br>
+    <button onclick="toggle(manualControl)">Toggle</button>Manual Control: You can choose whether or not you feel pleasure from pain. Requires Masochist.. (-2)<br>
+    <button onclick="toggle(cumConnoisseur)">Toggle</button>Cum Connoisseur: You love the taste of semen. Not only do you find it to be delicious, but it acts as an aphrodisiac that wears off after about an hour.. (1)<br>
+    <button onclick="toggle(sensitiveBody)">Toggle</button>Sensitive Body: Your entire body is now extra sensitive.. (1)<br>
+    <button onclick="toggle(erogenousBody)">Toggle</button>Erogenous Body: Your entire body is now an erogenous zone. Requires Sensitive Body.. (3)<br>
+    <button onclick="toggle(selectiveErogenousBody)">Toggle</button>Selective Erogenous Body: You can choose what parts of your body act as erogenous zones. Requires Erogenous Body.. (-3)<br>
+    <button onclick="toggle(amputee)">Toggle</button>Amputee: You can choose any of your four limbs to have cut off permanently. Cannot be taken with Detachable Limbs or Android.. (15)<br>
+    <button onclick="toggle(quadAmputee)">Toggle</button>Quadruple Amputee: All four of your limbs are cut off, permanently. Cannot be taken with Detachable Limbs or Android.. (100)<br>
+    <button onclick="toggle(accessible)">Toggle</button>Accessible: Your living space will be modified to make it more accessible to you. Requires Apartment or higher.. (-10)<br>
+    <button onclick="toggle(prosthetics)">Toggle</button>Prosthetics: Well will provide state of the art artificial limbs for all of your limbs that were cut off... after the show.. (-20)<br>
+    <button onclick="toggle(magicHair)">Toggle</button>Magic Hair: Your body will maintain a constant length of hair (on your head).. (-1)<br>
+    <button onclick="toggle(refractoryPeriod)">Toggle</button>Refractory Period: You no longer have to deal with a refractory period.. (-1)<br>
+    <button onclick="toggle(menstruationControl)">Toggle</button>Menstruation Control: You no longer have to deal with menstruation or its effects.. (-1)<br>
+    <button onclick="toggle(gagReflex)">Toggle</button>Gag Reflex: Your gag reflex is removed.. (-1)<br>
+    <button onclick="toggle(flexibleHoles)">Toggle</button>Flexible Holes: Makes all of your holes much more flexible than they would be naturally. Also increases natural lubrication.. (-1)<br>
+    <button onclick="toggle(tightFit)">Toggle</button>Tight Fit: You can accomodate almost anything, but always just barely. Every time will be like the first. Must have Flexible Holes.. (2)<br>
+    <button onclick="toggle(easyFit)">Toggle</button>Easy Fit: You can accomodate anything with ease. Sit back and enjoy the ride. Must have Flexible Holes.. (-2)<br>
+    <button onclick="toggle(openCervix)">Toggle</button>Open Cervix: Your womb can be entered with little effort. Requires a vagina.. (-1)<br>
+    <button onclick="toggle(fuckableNipples)">Toggle</button>Fuckable nipples: You can now have nipple sex.. (-1)<br>
+    <button onclick="toggle(tattoo)">Toggle</button>Tattoo: Add a tattoo anywhere on your body. Gives +1 credit for 'lewd' tattoos (e.g. a dick).. (1)<br>
+    <button onclick="toggle(piercing)">Toggle</button>Piercing: Add a piercing anywhere on your body. Gives +1 credit for piercings in the following 'lewd' locations: tongue, navel, nipples, clit, septum, vagina, penis(es).. (1)<br>
+    <button onclick="toggle(symbolShapedPupils)">Toggle</button>Symbol-shaped pupils: Change the shape of your pupils to whatever you want.. (-1)<br>
+    <button onclick="toggle(indicator)">Toggle</button>Indicator: Your pupils will only change shape when you're horny. Requires Symbol-Shaped Pupils. (-1)<br>
+    <button onclick="toggle(heterochromia)">Toggle</button>Heterochromia: Select two eye colors (one for each eye) instead of one.. (-1)<br>
+    <button onclick="toggle(tentacleDick)">Toggle</button>Tentacle dick: Your penis(es) will be turned into prehensile tentacles. Requires at least one penis.. (-2)<br>
+    <button onclick="toggle(elasticTongue)">Toggle</button>Elastic tongue: You can now extend your tongue up to 12 inches outside of your mouth.. (-2)<br>
+    <button onclick="toggle(alwaysPerky)">Toggle</button>Always perky: You no longer need to wear a bra.. (-1)<br>
+    <button onclick="toggle(zincSupplements)">Toggle</button>Zinc supplements: Doubles your natural semen production. Requires at least one penis.. (-1)<br>
+    <button onclick="toggle(lactation)">Toggle</button>Lactation: Your body will be modified to make your breasts produce milk. Requires at least one set of A-cup or larger breasts.. (-1)</p>
 
-    <script type="text/javascript">
-        function getRandomInt(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
-        //personality things.
-        function personality(){
-            document.write(
-            '<br>PERSONALITY <br>'
-            +'Affection: '+getRandomInt(1,7)+'<br>'
-            +'Sexual Appetite: '+getRandomInt(1,7)+'<br>'
-            +'Dominance: '+getRandomInt(1,7)+'<br>'
-            +'Lewdness: '+getRandomInt(1,7)+'<br>'
-            +'Romance: '+getRandomInt(1,7)+'<br>'
-            +'Clingyness: '+getRandomInt(1,7)+'<br>'        
-            +'Assertiveness: '+getRandomInt(1,7)+'<br>'
-            +'Bitchyness: '+getRandomInt(1,7)+'<br>'
-            +'Greed: '+getRandomInt(1,7)+'<br>'
-            +'Eloquence: '+getRandomInt(1,7)+'<br>'
-            +'Friendship: '+getRandomInt(1,7)+'<br>'
-            +'Maternal Instinct: '+getRandomInt(1,7)+'<br>'
-            );
-        }
-        var species =["Akaname", "Alice", "Alp", "Alraune", "Amazoness", "Angel", "AntArachne", "Anubis", "Apophis", "Apsara", "Arachne", "ArchImp", "Automaton", "Baphomet", "Barometz", "Basilisk", "Beelzebub", "Bicorn", "BlackHarpy", "BlueOni", "BubbleSlime", "CaitSith", "Cancer", "Centaur", "Charybdis", "CheshireCat", "Chimaera", "Chochin-Obake", "Cockatrice", "CrowTengu", "CuSith", "Cupid", "CursedSword", "Cyclops", "DarkAngel", "DarkElf", "DarkMage", "DarkMatter", "DarkPriest", "DarkSlime", "DarkValkyrie", "Demon", "DemonLord", "Devil", "Dhampir", "Doppelganger", "Dormouse", "Dragon", "DragonZombie", "Druella", "Dryad", "Dullahan", "Dwarf", "Echidna", "Elf", "Fairy", "Familiar", "FlowKelp", "Gandharva", "Gargoyle", "Gazer", "Ghost", "Ghoul", "GiantAnt", "GiantSlug", "Girtablilu", "Glacies", "Gnome", "Goblin", "Golem", "Gremlin", "Griffon", "Grizzly", "GyoubuDanuki", "Hakutaku", "Harpy", "Hellhound", "Hinezumi", "Hobgoblin", "Holstaur", "HoneyBee", "Hornet", "Houri", "HumptyEgg", "IceQueen", "Ignis", "Imp", "Inari", "Ittan-momen", "Jabberwock", "Jiangshi", "Jinko", "JinnoftheJar", "Jorou-Gumo", "Jubjub", "Kakuen", "Kamaitachi", "Kappa", "Karakasa-Obake", "Kejourou", "KesaranPasaran", "Khepri", "Kikimora", "Kitsune-bi", "Kitsune-tsuki", "Kobold", "Koyoi", "Kraken", "Kunoichi", "Lamia", "LargeMouse", "LavaGolem", "LeananSidhe", "LesserSuccubus", "Lich", "Lilim", "Liliraune", "LivingArmor", "LivingDoll", "Lizardman", "MadHatter", "Mandragora", "Manticore", "Mantis", "MarchHare", "Matango", "Medusa", "Mermaid", "Merrow", "Mersé", "Mimic", "Mimiru", "Mindflayer", "Minotaur", "Mothman", "MucusToad", "Mummy", "Nekomata", "Nereid", "Nightmare", "Nurarihyon", "Nureonago", "Ochimusha", "Ogre", "Oomukade", "Orc", "Otohime", "ParasiteSlime/SlimeCarrier", "Pharaoh", "Pixie", "Primera", "QueenofHearts", "QueenSlime", "Raiju", "RedOni", "RedSlime", "RenXiongmao", "Roper", "Ryu", "Sahuagin", "Salamander", "Sandworm", "SaphiretteSpherica", "Sasha", "Satyros", "Scylla", "SeaBishop", "SeaSlime", "Selkie", "Shirohebi", "Shoggoth", "Siren", "Skeleton", "Slime", "SoldierBeetle", "Sphinx", "Succubus", "Sylph", "Tentacle", "Thunderbird", "Titania", "Troll", "Trumpart", "UmiOsho", "UnagiJoro", "Undine", "Unicorn", "Ushi-Oni", "Valkyrie", "VampMosquito", "Vampire", "Wendigo", "Werebat", "Werecat", "Wererabbit", "Weresheep", "Werewolf", "WhiteHorn", "Wight", "Will-o-the-Wisp", "Wilmarina", "Witch", "Wurm", "Wyvern", "Yeti", "Youko", "Yuki-Onna", "Zombie"];
+
+    
+    
+    <!-- <button onclick="toggle()">Toggle</button><br> -->    
+    <p id="listMe">YOUR OPTIONS<br></p>
+    <p><button onclick="reset()">RESET ALL</button></p>
+    
+    
+    <SCRIPT SRC="varList.js"></SCRIPT>
+    
+    <script>
+        /*
+        VARIABLES HERE
+        */
+        var points = 0;
+        var taken = [];
         
-        function pickSpecies(){
-            document.write('<br>SPECIES: '+species[getRandomInt(1,species.length-1)]+'<br>');
-        }
+
         
-        document.write('<br>DIRECTIONS: Numbers below are 1-6, with 1 being not at all, 3 being \'eh\', and 6 being very much so.  You hold three copper coins in your hands, and can spend them as you please on your monster girl\s personality traits.  Each coin can add or subtract one from any given trait, but no trait can be brough below 1 or more than 6.  You cannot change species.<br>')
-        //call all functions here
-        pickSpecies();
-        personality();
+        /*
+        FUNCTIONS HERE
+        */
+        //puts options in good format
+        function makeString(input){
+            return input.name+": "+input.desc+". ("+input.cost+")";
+        }
+        //currently only adds object to taken, updates the big list.
+        function toggle(input){
+            var already = false;
+            for (i=0; i<=taken.length; i++){
+                if (input == taken[i]){ //if it's inside
+                    already = true;
+                    points = points-input.cost;
+                    taken.splice(i, 1);
+                }
+            }
+            if (already == false){ //if you go through and it's not inside
+                taken.push(input);
+                points = points+input.cost;
+            }
+            bigList();
+        }
+        //updates your options list and points total, only call with toggle
+        function bigList(){
+            document.getElementById("listMe").innerHTML = "YOUR OPTIONS<br>";
+            for (i=0; i<=taken.length; i++){
+                document.getElementById("listMe").innerHTML = document.getElementById("listMe").innerHTML+makeString(taken[i])+"<br>";
+                document.getElementById("counter").innerHTML = "Points: "+points;
+            }
+        }
+        //Empties the list completely
+        function reset(){
+            taken = [];
+            points = 0;
+            document.getElementById("counter").innerHTML = "Points: 0";
+            bigList();
+        }
+
+        
+        /*
+        TEST CALLS HERE
+        */
+               
+
     </script>
+
 </body>
 </html> 
